@@ -20,7 +20,7 @@
            <div>
             <div class="stats shadow">
                 <div class="stat">
-                  <div class="stat-value">89,400</div>
+                  <div id="account-balance" class="stat-value">9400</div>
                   <div class="stat-desc">Available Balance</div>
                 </div>
               </div>
@@ -28,13 +28,13 @@
            <div class="divider"></div>
            <!-- user action button -->
             <div>
-                <button class="btn btn-lg">Add Money</button>
-                <button class="btn btn-lg">Cash Out</button>
+                <button id="btn-cash-add" class="btn btn-lg">Add Money</button>
+                <button id="btn-cash-out" class="btn btn-lg">Cash Out</button>
             </div>
             <div class="divider"></div>
 
             <!-- money add start -->
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div id="cash-add-from" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <form class="card-body">
                   <div class="form-control">
                     <label class="label">
@@ -54,6 +54,28 @@
                 </form>
               </div>
              <!--money add end -->
+
+             <!-- money out start -->
+             <div id="cash-out-from" class="hidden mt-4 card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Amount to Out</span>
+                  </label>
+                  <input id="input-money-out" type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin Number</span>
+                  </label>
+                  <input id="input-pin-out" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="btn-money-out" class="btn btn-primary">Out Money</button>
+                </div>
+              </form>
+            </div>
+              <!-- money out end -->
               </div>
             </div>
           </div>
@@ -61,5 +83,7 @@
 
      <!-- script -->
       <script src="js/home.js"></script>
+      <script src="./js/taka.js"></script>
+      <script src="./js/featur.js"></script>
 </body>
 </html>
